@@ -1,0 +1,25 @@
+.rotate__container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.rotate__container > h1 {
+    animation: blink 3s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    } 50% {
+        opacity: 1;
+    } 100% {
+        opacity: 0;
+    }
+}

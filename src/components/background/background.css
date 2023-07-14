@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Retro';
+    src: url('../fonts/arcade.TTF') format('truetype');
+  }
+
+.background__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; 
+    display: grid;
+    place-items: center;
+}
+
+.beyondSynth {
+    transform: translateX(250%);
+    transition: transform 20s;
+}
+
+.middleSynth {
+    transform: translateX(0%);
+    transition: transform 20s;
+}
+
+.square {
+    outline: 1px aqua solid;
+    z-index: -49;
+}
+
+.road {
+    width: 100%;
+    height: 8%;
+    background: linear-gradient(
+        to bottom,
+        black,
+        rgb(20, 20, 20)
+    );
+
+    position: absolute;
+    top: 87%;
+
+    border-top: rgb(255, 0, 208) 5px solid;
+    border-bottom: rgb(255, 2, 145) 5px solid;
+}
+  
+.userInfo {
+    width: 18%;
+    height: 5%;
+    z-index: 50;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Retro';
+    font-size: x-large;
+    background: rgba(127, 255, 212, 0.895);
+    box-shadow: 
+    0 0 2px cyan,
+    0 0 4px aquamarine,
+    0 0 6px aquamarine,
+    0 0 12px aquamarine,
+    0 0 15px aquamarine,
+    0 0 18px aquamarine,
+    0 0 32px aquamarine;
+}
+
+.userInfo > span {
+    color: rgb(255, 41, 77)
+}
+
+.sun {
+    width: 17%;
+    height: 30%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 1) 10%, rgba(255, 0, 213, 1) 100%);
+    border-radius: 50%;
+    position: absolute;
+    top: 0%;
+    z-index: -50;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+
+    box-shadow: 
+    0 0 5px white,
+    0 0 10px white,
+    0 0 20px white,
+    0 0 40px pink,
+    0 0 60px pink,
+    0 0 100px red,
+    0 0 200px orangered,
+    0 0 400px rgba(255, 0, 213, 1),
+    0 0 600px rgba(255, 0, 213, 1),
+    0 0 800px rgba(255, 0, 213, 1),
+    0 0 1200px rgba(255, 0, 213, 1),
+    0 0 1500px rgba(255, 0, 213, 1),
+    0 0 1800px rgba(255, 0, 213, 1);
+
+    animation: planet forwards 180s;
+}
+
+@keyframes planet {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-height: 420px) {
+    .userInfo {
+        font-size: small;
+    }
+}
+
+@media screen and (width: 2560px) and (height: 1440px) {
+    .userInfo {
+        font-size: xx-large;
+    }
+}
+
+@media screen and (width: 3840px) and (height: 2160px) {
+    .userInfo {
+        font-size: 300%;
+    }
+}
+
+@media screen and (min-width: 2560px) and (min-height: 1600px) {
+    .userInfo {
+        font-size: 250%;
+    }
+}
+
+@media screen and (min-width: 3000px) and (min-height: 1900px) {
+    .userInfo {
+        font-size: 350%;
+    }
+}
+
+@media screen and (min-width: 5000px) and (min-height: 2800px) {
+    .userInfo {
+        font-size: 450%;
+    }
+}

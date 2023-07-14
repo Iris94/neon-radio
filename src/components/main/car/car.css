@@ -1,0 +1,397 @@
+@font-face {
+    font-family: 'retro';
+    src: url('../fonts/arcade.TTF') format('truetype');
+}
+
+.car__space {
+    display: flex;
+    justify-content: center;
+    z-index: 16;
+    position: relative;
+    bottom: 25%;
+}
+
+.car__container {
+    position: relative;
+    width: 100%;
+}
+
+.car {
+    width: 25%;
+    height: 75%;
+    z-index: 10;
+    position: relative;
+    bottom: -30%;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+}
+
+.bubble {
+    position: absolute;
+    width: 40%;
+    height: 70%;
+    background-color: whitesmoke;
+    bottom: 70%;
+    border-radius: 50%;
+    right: 70%;
+    padding: 10px;
+    text-align: center;
+    border: 3px black dotted;
+}
+
+.hide {
+    display: none;
+}
+
+.bubble-line {
+    position: absolute;
+    width: 7%;
+    height: 5%;
+    background-color: whitesmoke;
+    border: 1px black dotted;
+    transform: rotate(40deg);
+    left: 20%;
+    top: 20%;
+}
+
+.car.beyond {
+    transform: translateX(1620%);
+    transition: transform 20;
+}
+  
+.car.middle {
+    transform: translateX(80%);
+    transition: transform 20s;
+}
+
+.car-front {
+    width: 30%;
+    height: 30%;
+    border-radius: 20% 0 0 35%;
+    position: absolute;
+    bottom: 34%;
+    background: linear-gradient(
+        to bottom,
+        pink,
+        black
+    );
+    border-top: 2px aqua solid;
+}
+
+.car-top, .car-front, .car-back:hover {
+    cursor: pointer;
+}
+
+.car-top {
+    width: 30%;
+    height: 50%;
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    left: 20%;
+    bottom: 33%;
+    background: linear-gradient(
+        to bottom,
+        pink,
+        black
+    );
+    border-top: 2px aqua solid;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    overflow: hidden;
+}
+
+.car-windows {
+    outline: 2px black solid;
+    display: flex;
+    gap: 2px;
+}
+
+.car-windows > div {
+    background: linear-gradient(
+        to right,
+        aqua,
+        lightblue
+    );
+    width: 50%;
+}
+
+.car-doors {
+    display: flex;
+    gap: 25%;
+    font-family: 'retro';
+}
+
+.car-doors > div {
+    background: black;
+    width: 10%;
+    height: 3px;
+    position: relative;
+    top: 5px;
+    left: 35px
+}
+
+.car-doors-radio {
+    font-size: x-large;
+    color: aqua
+}
+
+.car-back {
+    width: 14%;
+    height: 35%;
+    border-radius: 0 80% 20% 0;
+    position: absolute;
+    left: 48%;
+    background: linear-gradient(
+        to bottom,
+        pink,
+        black
+    );
+    border-top: 2px aqua solid
+}
+
+.car-wheels {
+    display: flex;
+    width: 70%;
+    height: 20%;
+    gap: 50%;
+}
+
+.rims {
+    width: 10%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(
+        to right,
+        black,
+        gray
+    );
+    z-index: 11;
+    position: relative;
+    top: 40%;
+    left: 6%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px aqua solid;
+}
+
+.rims.rotate {
+    animation: wheelRotation 0.5s infinite linear;
+}
+
+.car-wheels > div > div {
+    width: 70%;
+    height: 10%;
+    background-color: aqua;
+    border-radius: 5%;
+}
+
+@keyframes wheelRotation {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(-360deg);
+    }
+}
+
+  
+@media screen and (orientation: landscape) and (max-width: 990px) {
+    .rims {
+        width: 12px;
+        height: 12px;
+    }
+
+    .car-wheels {
+        gap: 60%;
+        position: relative;
+        right: 7%
+    }
+
+    .car {
+        width: 25%;
+        height: 90%;
+        z-index: 10;
+        position: relative;
+        bottom: -30%;
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+    }
+
+    .car-back {
+        width: 25%
+    }
+
+    .car-front {
+        position: absolute;
+        left: -9%
+    }
+    
+    .car-doors {
+        display: flex;
+        gap: 25%;
+        font-family: 'retro';
+        position: relative;
+        right: 30%;
+    }
+    
+    .car-doors > div {
+        background: black;
+        width: 10%;
+        height: 3px;
+        position: relative;
+        top: 5px;
+        left: 35px
+    }
+    .car-doors-radio {
+        font-size: small;
+        color: transparent;
+    }
+
+    .bubble {
+        position: absolute;
+        width: 70%;
+        height: 80%;
+        background-color: whitesmoke;
+        bottom: 70%;
+        border-radius: 50%;
+        right: 70%;
+        padding: 20px;
+        text-align: center;
+        border: 3px black dotted;
+        font-size: small;
+        display: grid;
+        place-items: center;
+    }
+    
+    .hide {
+        display: none;
+    }
+    
+    .bubble-line {
+        position: absolute;
+        width: 7%;
+        height: 5%;
+        background-color: whitesmoke;
+        border: 1px black dotted;
+        transform: rotate(40deg);
+        left: 20%;
+        top: 20%;
+    }
+}
+
+@media screen and (width: 2560px) and (height: 1440px) {
+    .rims {
+        width: 40px;
+        height: 40px;
+    }
+
+    .car-doors-radio {
+        font-size: xx-large
+    }
+
+    .bubble {
+        font-size: xx-large;
+        width: 80%;
+        height: 80%;
+        display: grid;
+        place-items: center
+    }
+}
+
+@media screen and (width: 3840px) and (height: 2160px) {
+    .rims {
+        width: 60px;
+        height: 60px;
+    }
+
+    .car-doors-radio {
+        font-size: 400%
+    }
+
+    .bubble {
+        font-size: 300%;
+        width: 80%;
+        height: 80%;
+        display: grid;
+        place-items: center
+    }
+}
+
+@media screen and (min-width: 2560px) and (min-height: 1600px) {
+    .rims {
+        width: 40px;
+        height: 40px;
+    }
+
+    .car-doors-radio {
+        font-size: 300%
+    }
+
+    .bubble {
+        font-size: 200%;
+        width: 80%;
+        height: 80%;
+        display: grid;
+        place-items: center
+    }
+}
+
+@media screen and (width: 1280px) and (height: 800px) {
+    .rims {
+        width: 25px;
+        height: 25px;
+    }
+
+    .car-doors-radio {
+        font-size: 120%;
+    }
+
+    .bubble {
+        font-size: 120%;
+        width: 80%;
+        height: 80%;
+        display: grid;
+        place-items: center
+    }
+}
+
+@media screen and (min-width: 3000px) and (min-height: 1900px) {
+    .rims {
+        width: 50px;
+        height: 50px;
+    }
+
+    .car-doors-radio {
+        font-size: 350%;
+    }
+
+    .bubble {
+        font-size: 250%;
+        width: 80%;
+        height: 80%;
+        display: grid;
+        place-items: center
+    }
+}
+
+@media screen and (min-width: 5000px) and (min-height: 2800px) {
+    .rims {
+        width: 80px;
+        height: 80px;
+    }
+
+    .car-doors-radio {
+        font-size: 550%;
+    }
+
+    .bubble {
+        font-size: 450%;
+        width: 80%;
+        height: 80%;
+        display: grid;
+        place-items: center
+    }
+}

@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'ArcadeClassic';
+  src: url('./components/fonts/Atari.ttf') format('truetype');
+}
+
+.beyondScreen {
+  transform: translateX(-250%);
+  transition: transform 20s;
+}
+
+.middleScreen {
+  transform: translateX(0%);
+  transition: transform 20s;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas: 
+    "nav  main"
+    "nav  main";
+  background: linear-gradient(179deg, rgba(0, 0, 0, 1) 0%, rgba(31, 0, 26, 1) 100%);
+
+  font-family: 'ArcadeClassic';
+}
+
+.kill {
+  position: absolute;
+  left: 250%;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: 5fr 1fr;
+  z-index: 2;
+
+}
+
+nav {
+  grid-area: nav;
+}

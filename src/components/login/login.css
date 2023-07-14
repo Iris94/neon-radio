@@ -1,0 +1,616 @@
+@font-face {
+    font-family: 'Retro';
+    src: url('../fonts/arcade.TTF') format('truetype');
+  }
+
+.login__container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    left: 250%;
+    overflow: hidden;
+    z-index: 49;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__box {
+    width: 75%;
+    height: 75%;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    position: relative;
+    place-items: center;
+}
+
+.screen__box {
+    background: rgba(127, 255, 212, 0.895);
+    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    width: 65%;
+    height: 65%;
+
+    box-shadow: 
+    0 0 2px cyan,
+    0 0 4px aquamarine,
+    0 0 6px aquamarine,
+    0 0 12px aquamarine,
+    0 0 15px aquamarine,
+    0 0 18px aquamarine,
+    0 0 32px aquamarine;
+
+    font-family: 'Retro';
+}
+
+.screen__box > input {
+    background: transparent;
+    text-align: center;
+    font-family: 'Retro';
+    color: rgb(255, 41, 77);
+    border: none;
+    width: 15%;
+    font-size: large;
+}
+
+.screen__box > button {
+    width: 18%;
+    height: 28%;
+    font-family: 'Retro';
+    font-size: x-large;
+    color: white;
+    background-color: rgb(255, 41, 77);
+    border: none;
+}
+
+.keyboard__box {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 60%;
+    height: 60%;
+    position: relative;
+    border-radius: 100px 100px 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+    align-items: center;
+    padding: 2%;
+    justify-content: center;
+    font-size: large;
+    border: 2px solid rgba(127, 255, 212, 0.895);
+
+
+    box-shadow: 
+    0 0 2px white,
+    0 0 4px white,
+    0 0 8px aqua,
+    0 0 12px aqua
+  }
+  
+.keys {
+    border: 2px solid rgba(127, 255, 212, 0.895);
+    border-radius: 20%;
+    width: 10%;
+    height: 20%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(127, 255, 212, 0.895);
+
+    box-shadow: 
+    0 0 1px white,
+    0 0 2px white,
+    0 0 3px aqua,
+    0 0 4px aqua
+
+}
+
+.animate-key {
+    animation: press 0.1s linear;
+}
+
+@keyframes press {
+     50% {
+        border: 2px solid rgb(255, 41, 77);
+        color: rgb(255, 41, 77);
+        box-shadow: 
+        0 0 1px white,
+        0 0 2px white,
+        0 0 3px rgb(255, 41, 77),
+        0 0 4px rgb(255, 41, 77);
+
+        margin: 1px
+    } 
+}
+  
+
+@media screen and (orientation: landscape) and (max-width: 990px) {
+
+    @font-face {
+        font-family: 'Retro';
+        src: url('../fonts/arcade.TTF') format('truetype');
+      }
+    
+    .login__container {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: transparent;
+        display: grid;
+        place-content: center;
+        left: 250%;
+        overflow: hidden;
+        z-index: 49;
+    }
+    
+    .login__box {
+        width: 50vw;
+        height: 50vh;
+        display: grid;
+        grid-template-rows: 1fr 2fr;
+    }
+    
+    .screen__box {
+        background: rgba(127, 255, 212, 0.895);
+        font-size: xx-large;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    
+        box-shadow: 
+        0 0 2px cyan,
+        0 0 4px aquamarine,
+        0 0 6px aquamarine,
+        0 0 12px aquamarine,
+        0 0 15px aquamarine,
+        0 0 18px aquamarine,
+        0 0 32px aquamarine;
+    
+        font-family: 'Retro';
+    }
+    
+    .screen__box > input {
+        background: transparent;
+        text-align: center;
+        font-family: 'Retro';
+        color: rgb(255, 41, 77);
+        border: none;
+        width: 15%;
+        font-size: normal;
+    }
+    
+    .screen__box > button {
+        width: 18%;
+        height: 28%;
+        font-family: 'Retro';
+        font-size: normal;
+        color: white;
+        background-color: rgb(255, 41, 77);
+        border: none;
+    }
+    
+    .keyboard__box {
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 15%;
+        border-radius: 100px 100px 20px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        align-items: center;
+        padding: 20px;
+        justify-content: center;
+        font-size: large;
+        border: 5px solid rgba(127, 255, 212, 0.895);
+        right: 20px;
+    
+        box-shadow: 
+        0 0 2px white,
+        0 0 4px white,
+        0 0 8px aqua,
+        0 0 12px aqua
+      }
+      
+    .keys {
+        border: 2px solid rgba(127, 255, 212, 0.895);
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(127, 255, 212, 0.895);
+    
+        box-shadow: 
+        0 0 1px white,
+        0 0 2px white,
+        0 0 3px aqua,
+        0 0 4px aqua
+    
+    }
+    
+    .animate-key {
+        animation: press 0.1s linear;
+    }
+    
+    @keyframes press {
+         50% {
+            width: 55px;
+            height: 55px; 
+            border: 2px solid rgb(255, 41, 77);
+            color: rgb(255, 41, 77);
+            box-shadow: 
+            0 0 1px white,
+            0 0 2px white,
+            0 0 3px rgb(255, 41, 77),
+            0 0 4px rgb(255, 41, 77)
+        } 
+    }
+}
+  
+
+@media screen and (orientation: landscape) and (max-height: 420px) {
+    @font-face {
+        font-family: 'Retro';
+        src: url('../fonts/arcade.TTF') format('truetype');
+      }
+    
+    .login__container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        left: 250%;
+        overflow: hidden;
+        z-index: 49;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .login__box {
+        width: 75%;
+        height: 75%;
+        display: grid;
+        grid-template-rows: 1fr 2fr;
+        position: relative;
+        place-items: center;
+    }
+    
+    .screen__box {
+        background: rgba(127, 255, 212, 0.895);
+        font-size: xx-large;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    
+        width: 65%;
+        height: 65%;
+    
+        box-shadow: 
+        0 0 2px cyan,
+        0 0 4px aquamarine,
+        0 0 6px aquamarine,
+        0 0 12px aquamarine,
+        0 0 15px aquamarine,
+        0 0 18px aquamarine,
+        0 0 32px aquamarine;
+    
+        font-family: 'Retro';
+    }
+    
+    .screen__box > input {
+        background: transparent;
+        text-align: center;
+        font-family: 'Retro';
+        color: rgb(255, 41, 77);
+        border: none;
+        width: 15%;
+        font-size: large;
+    }
+    
+    .screen__box > button {
+        width: 18%;
+        height: 28%;
+        font-family: 'Retro';
+        font-size: x-large;
+        color: white;
+        background-color: rgb(255, 41, 77);
+        border: none;
+    }
+    
+    .keyboard__box {
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 60%;
+        height: 60%;
+        position: relative;
+        border-radius: 100px 100px 20px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3%;
+        align-items: center;
+        padding: 2%;
+        justify-content: center;
+        font-size: large;
+        border: 2px solid rgba(127, 255, 212, 0.895);
+    
+    
+        box-shadow: 
+        0 0 2px white,
+        0 0 4px white,
+        0 0 8px aqua,
+        0 0 12px aqua
+      }
+      
+    .keys {
+        border: 2px solid rgba(127, 255, 212, 0.895);
+        border-radius: 20%;
+        width: 10%;
+        height: 20%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(127, 255, 212, 0.895);
+    
+        box-shadow: 
+        0 0 1px white,
+        0 0 2px white,
+        0 0 3px aqua,
+        0 0 4px aqua
+    
+    }
+    
+    .animate-key {
+        animation: press 0.1s linear;
+    }
+    
+    @keyframes press {
+         50% {
+            border: 2px solid rgb(255, 41, 77);
+            color: rgb(255, 41, 77);
+            box-shadow: 
+            0 0 1px white,
+            0 0 2px white,
+            0 0 3px rgb(255, 41, 77),
+            0 0 4px rgb(255, 41, 77);
+    
+            margin: 1px
+        } 
+    }
+      
+    
+    @media screen and (orientation: landscape) and (max-width: 990px) {
+    
+        @font-face {
+            font-family: 'Retro';
+            src: url('../fonts/arcade.TTF') format('truetype');
+          }
+        
+        .login__container {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background: transparent;
+            display: grid;
+            place-items: center;
+            left: 250%;
+            overflow: hidden;
+            z-index: 49;
+        }
+        
+        .login__box {
+            width: 50%;
+            height: 30%;
+            display: grid;
+            grid-template-rows: 1fr 2fr;
+        }
+        
+        .screen__box {
+            background: rgba(127, 255, 212, 0.895);
+            font-size: x-small;
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        
+            box-shadow: 
+            0 0 2px cyan,
+            0 0 4px aquamarine,
+            0 0 6px aquamarine,
+            0 0 12px aquamarine,
+            0 0 15px aquamarine,
+            0 0 18px aquamarine,
+            0 0 32px aquamarine;
+        
+            font-family: 'Retro';
+        }
+        
+        .screen__box > input {
+            background: transparent;
+            text-align: center;
+            font-family: 'Retro';
+            color: rgb(255, 41, 77);
+            border: none;
+            width: 30%;
+            font-size: smaller;
+        }
+        
+        .screen__box > button {
+            width: 30%;
+            height: 28%;
+            font-family: 'Retro';
+            font-size: x-small;
+            color: white;
+            background-color: rgb(255, 41, 77);
+            border: none;
+        }
+        
+        .keyboard__box {
+            background-color: rgba(0, 0, 0, 0.9);
+            width: 80%;
+            height: 50%;
+            position: relative;
+            top: 10%;
+            border-radius: 20% 20% 5% 5%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            align-items: center;
+            padding: 18px;
+            justify-content: center;
+            font-size: x-small;
+            border: 1px solid rgba(127, 255, 212, 0.895);
+            left: 0%;
+        
+            box-shadow: 
+            0 0 2px white,
+            0 0 4px white,
+            0 0 8px aqua,
+            0 0 12px aqua
+          }
+          
+        .keys {
+            border: 1px solid rgba(127, 255, 212, 0.895);
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgba(127, 255, 212, 0.895);
+        
+            box-shadow: 
+            0 0 1px white,
+            0 0 2px white,
+            0 0 3px aqua,
+            0 0 4px aqua
+        
+        }
+        
+        .animate-key {
+            animation: press 0.1s linear;
+        }
+        
+        @keyframes press {
+             50% {
+                border: 1px solid rgb(255, 41, 77);
+                color: rgb(255, 41, 77);
+                box-shadow: 
+                0 0 1px white,
+                0 0 2px white,
+                0 0 3px rgb(255, 41, 77),
+                0 0 4px rgb(255, 41, 77)
+            } 
+        }
+    }
+  }
+
+@media screen and (width: 2560px) and (height: 1440px) {
+    .screen__box > input {
+        font-size: xx-large;
+    }
+
+    .screen__box > button {
+        font-size: xx-large;
+    }
+
+    .keys {
+        font-size: xx-large
+    }
+}
+
+@media screen and (width: 3840px) and (height: 2160px) {
+
+    .screen__box > label {
+        font-size: 150%;
+    }
+
+    .screen__box > input {
+        font-size: 150%;
+    }
+
+    .screen__box > button {
+        font-size: 200%;
+    }
+
+    .keys {
+        font-size: 300%;
+    }
+}
+
+@media screen and (min-width: 2560px) and (min-height: 1600px) {
+    .screen__box > label {
+        font-size: 120%;
+    }
+
+    .screen__box > input {
+        font-size: 120%;
+    }
+
+    .screen__box > button {
+        font-size: 150%;
+    }
+
+    .keys {
+        font-size: 200%;
+    }
+}
+
+@media screen and (min-width: 3000px) and (min-height: 1900px) {
+    .screen__box > label {
+        font-size: 150%;
+    }
+
+    .screen__box > input {
+        font-size: 150%;
+        width: 20%;
+    }
+
+    .screen__box > button {
+        font-size: 180%;
+    }
+
+    .keys {
+        font-size: 250%;
+    }
+
+}
+
+@media screen and (min-width: 5000px) and (min-height: 2800px) {
+    .screen__box > label {
+        font-size: 250%;
+    }
+
+    .screen__box > input {
+        font-size: 250%;
+        width: 20%;
+    }
+
+    .screen__box > button {
+        font-size: 250%;
+    }
+
+    .keys {
+        font-size: 350%;
+    }
+
+}
+
+

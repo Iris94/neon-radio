@@ -1,0 +1,482 @@
+@font-face {
+    font-family: 'punk kid';
+    src: url('../../fonts/punk kid.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'retro';
+    src: url('../fonts/arcade.TTF') format('truetype');
+}
+
+.radio__container {
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    left: 250%;
+    overflow: hidden;
+    z-index: 49;
+}
+
+.radio {
+    width: 60%;
+    height: 80%;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.radio-text {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    font-size: xx-large;
+    font-family: 'retro';
+    flex-wrap: wrap;
+    word-spacing: 0.5rem;
+}
+
+.radio-text1 {
+    position: relative;
+}
+
+.radio-text2 {
+    position: relative;
+    text-align: center;
+    bottom: 15%
+}
+
+.radio-check {
+    width: 80%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    position: relative;
+    bottom: 15%;
+}
+
+.radio-check-Y, .radio-check-N {
+    width: 10%;
+    background-color: transparent;
+    border: none;
+    color: whitesmoke;
+    font-size: xx-large;
+    font-family: 'retro';
+}
+
+.radio-check-Y:hover {
+    color: aqua;
+}
+
+.radio-check-N:hover {
+    color: red;
+}
+
+.radio-check-Y, .radio-check-N:hover {
+    cursor: pointer;
+}
+
+.radio-check-OR {
+    color: whitesmoke;
+    position: relative;
+    bottom: 50%;
+    font-size: xx-large;
+    font-family: 'retro';
+}
+
+.radio-shape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 15%
+}
+
+.tape {
+    width: 60%;
+    height: 80%;
+    border-radius: 2%;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    place-items: center;
+
+    background: radial-gradient(ellipse at 100% 100%, rgba(255, 255, 0, 1) 0%, rgba(0, 126, 142, 1) 0%, rgba(32, 1, 32, 1) 100%);
+}
+
+.tape-text {
+    width: 80%;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 50%;
+
+    font-size: xx-large;
+    font-family: 'Punk Kid';
+
+    transform: rotate(-5deg);
+    position: relative;
+    top: 20%
+}
+
+.tape-holes {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    gap: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.tape-holes > div {
+    width: 17%;
+    height: 40%;
+    border-radius: 50%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tape-holes > div > div {
+    width: 85%;
+    height: 5%;
+    background-color: brown;
+    animation: rotate 5s infinite linear
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg)
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 990px) {
+
+    .radio__container {
+        width: 100vw;
+        height: 100vh;
+        background-color: transparent;
+        display: grid;
+        place-items: center;
+        position: absolute;
+        left: 250%;
+        overflow: hidden;
+        z-index: 49;
+    }
+    
+    .radio {
+        width: 60%;
+        height: 80%;
+        position: relative;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    .radio-text {
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        color: whitesmoke;
+        font-size: smaller;
+        font-family: 'retro';
+        flex-wrap: wrap;
+        position: relative;
+        top: 30%
+    }
+    
+    .radio-text1 {
+        position: relative;
+    }
+    
+    .radio-text2 {
+        position: relative;
+        text-align: center;
+        bottom: 20%
+    }
+    
+    .radio-check {
+        width: 80%;
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        gap: 3%;
+        position: relative;
+        bottom: 35%;
+    }
+    
+    .radio-check-Y, .radio-check-N {
+        width: 10%;
+        background-color: transparent;
+        border: none;
+        color: whitesmoke;
+        font-size: normal;
+        font-family: 'retro';
+    }
+    
+    .radio-check-Y:hover {
+        color: aqua;
+    }
+    
+    .radio-check-N:hover {
+        color: red;
+    }
+    
+    .radio-check-Y, .radio-check-N:hover {
+        cursor: pointer;
+    }
+    
+    .radio-check-OR {
+        color: whitesmoke;
+        position: relative;
+        bottom: 120%;
+        font-size: xx-large;
+        font-family: 'retro';
+    }
+    
+    .radio-shape {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    
+    .tape {
+        width: 50%;
+        height: 80%;
+        border-radius: 2%;
+        display: grid;
+        grid-template-rows: 1fr 3fr;
+        place-items: center;
+    
+        background: radial-gradient(ellipse at 100% 100%, rgba(255, 255, 0, 1) 0%, rgba(0, 126, 142, 1) 0%, rgba(32, 1, 32, 1) 100%);
+    }
+    
+    .tape-text {
+        width: 80%;
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 50%;
+    
+        font-size: smaller;
+        font-family: 'Punk Kid';
+    
+        transform: rotate(-5deg);
+        position: relative;
+        top: 20%
+    }
+    
+    .tape-holes {
+        width: 80%;
+        height: 90%;
+        display: flex;
+        gap: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .tape-holes > div {
+        width: 17%;
+        height: 40%;
+        border-radius: 50%;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .tape-holes > div > div {
+        width: 85%;
+        height: 5%;
+        background-color: brown;
+        animation: rotate 5s infinite linear
+    }
+}
+
+@media screen and (width: 2560px) and (height: 1440px) {
+    .radio-text {
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        color: whitesmoke;
+        font-size: xx-large;
+        font-family: 'retro';
+        flex-wrap: wrap;
+        position: relative;
+        top: 30%;
+    }
+    
+    .radio-text1 {
+        position: relative;
+    }
+    
+    .radio-text2 {
+        position: relative;
+        text-align: center;
+        bottom: 20%
+    }
+    
+    .radio-check {
+        width: 80%;
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        gap: 3%;
+        position: relative;
+        bottom: 35%;
+    }
+    
+    .radio-check-Y, .radio-check-N {
+        width: 10%;
+        background-color: transparent;
+        border: none;
+        color: whitesmoke;
+        font-size: xx-large;
+        font-family: 'retro';
+    }
+    
+    .radio-check-Y:hover {
+        color: aqua;
+    }
+    
+    .radio-check-N:hover {
+        color: red;
+    }
+    
+    .radio-check-Y, .radio-check-N:hover {
+        cursor: pointer;
+    }
+    
+    .radio-check-OR {
+        color: whitesmoke;
+        position: relative;
+        bottom: 10%;
+        font-size: xx-large;
+        font-family: 'retro';
+    }
+}
+
+@media screen and (width: 3840px) and (height: 2160px) {
+    .radio-text {
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        color: whitesmoke;
+        font-size: 450%;
+        font-family: 'retro';
+        flex-wrap: wrap;
+        position: relative;
+        top: 30%;
+    }
+    
+    .radio-text1 {
+        position: relative;
+    }
+    
+    .radio-text2 {
+        position: relative;
+        text-align: center;
+        bottom: 20%
+    }
+    
+    .radio-check {
+        width: 80%;
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        gap: 3%;
+        position: relative;
+        bottom: 35%;
+    }
+    
+    .radio-check-Y, .radio-check-N {
+        width: 10%;
+        background-color: transparent;
+        border: none;
+        color: whitesmoke;
+        font-size: 150%;
+        font-family: 'retro';
+    }
+    
+    .radio-check-OR {
+        color: whitesmoke;
+        position: relative;
+        bottom: 75%;
+        font-size: 150%;
+        font-family: 'retro';
+    }
+
+    .tape-text {
+        font-size: 500%;
+    }
+}
+
+@media screen and (min-width: 2560px) and (min-height: 1600px) {
+    .tape-text {
+        font-size: 300%;
+    }
+
+    .radio-text {
+        font-size: 350%;
+    }
+
+    .radio-check-Y, .radio-check-N {
+        font-size: 150%;
+    }
+    
+    .radio-check-OR {
+        font-size: 150%;
+        font-family: 'retro';
+    }
+}
+
+@media screen and (min-width: 3000px) and (min-height: 1900px) {
+    .tape-text {
+        font-size: 350%;
+    }
+
+    .radio-text {
+        font-size: 400%;
+    }
+
+    .radio-check-Y, .radio-check-N {
+        font-size: 200%;
+    }
+    
+    .radio-check-OR {
+        font-size: 200%;
+        font-family: 'retro';
+        bottom: 100%
+    }
+}
+
+@media screen and (min-width: 5000px) and (min-height: 2800px) {
+    .tape-text {
+        font-size: 600%;
+    }
+
+    .radio-text {
+        font-size: 650%;
+    }
+
+    .radio-check-Y, .radio-check-N {
+        font-size: 200%;
+    }
+    
+    .radio-check-OR {
+        font-size: 200%;
+        font-family: 'retro';
+        bottom: 100%
+    }
+}
+
